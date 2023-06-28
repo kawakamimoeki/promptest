@@ -1,0 +1,27 @@
+{
+  "name": "promptest",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "build": "tsc -d --outDir dist/ index.ts",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.2",
+    "@types/node": "^20.3.2",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.5"
+  },
+  "dependencies": {
+    "remeda": "^1.23.0"
+  }
+}
