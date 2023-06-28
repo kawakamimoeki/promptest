@@ -12,6 +12,7 @@ The Prompt testing library for LLM that allows comparing patterns of prompts.
 ## Usage
 
 ```ts
+// prompt.test.js
 const { Configuration, OpenAIApi } = require("openai")
 const { variable, promptest } = require('promptest')
 
@@ -26,7 +27,7 @@ variable("age", ["20", "30"])
 promptest(
   "Your name is {{name}}, and you are {{age}} years old.",
   "Hello!",
-  async (subject: string, input: string) => {
+  async (subject, input) => {
     const chatCompletion = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
       messages: [
@@ -37,6 +38,10 @@ promptest(
     return chatCompletion.data.choices[0].message.content
   }
 ).then(console.log).catch(console.error)
+```
+
+```bash
+npx node prompt.test.js
 ```
 
 ### Variable
