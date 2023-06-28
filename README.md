@@ -1,5 +1,8 @@
 # PrompTest
 
+![v](https://badgen.net/npm/v/promptest)
+![license](https://badgen.net/github/license/moekidev/promptest)
+
 The Prompt testing library for LLM that allows comparing patterns of prompts.
 
 ## Installation
@@ -10,7 +13,7 @@ The Prompt testing library for LLM that allows comparing patterns of prompts.
 
 ```ts
 const { Configuration, OpenAIApi } = require("openai")
-const { variable, promptest } = require('./index')
+const { variable, promptest } = require('promptest')
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
@@ -97,19 +100,19 @@ The result is JSON.
   "results": [
     {
       "subject": "Your name is John, and you are 20 years old",
-      "run": "Hello! How can I assist you today?"
+      "output": "Hello! How can I assist you today?"
     },
     {
       "subject": "Your name is Jane, and you are 20 years old",
-      "run": "Hello! How can I assist you today?"
+      "output": "Hello! How can I assist you today?"
     },
     {
       "subject": "Your name is John, and you are 30 years old",
-      "run": "Hello! How can I help you today?"
+      "output": "Hello! How can I help you today?"
     },
     {
       "subject": "Your name is Jane, and you are 30 years old",
-      "run": "Hello! How can I assist you today?"
+      "output": "Hello! How can I assist you today?"
     },
   ]
 }
