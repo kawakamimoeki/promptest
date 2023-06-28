@@ -52,7 +52,7 @@ variable("name", ["John", "Jane"])
 
 `variable` is called with variable name and patterns.
 
-### Template
+### Subject
 
 The subject prompt template is defined with `{{name}}`.
 
